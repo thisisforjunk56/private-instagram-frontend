@@ -27,7 +27,7 @@ async function downloadReel(id: string) {
     return result
 }
 
-app.get('/reel/:id', async (c) => {
+app.get('/api/reel/:id', async (c) => {
   const id = c.req.param("id")
 
   const reelExist = await db.select().from(schema.reelsTable).where(eq(schema.reelsTable.reelId, id))
