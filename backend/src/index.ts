@@ -18,11 +18,12 @@ app.use("*", cors({
 async function downloadReel(id: string) {
     const result = await ytdlp
     .download(`https://www.instagram.com/reel/${id}`)
+    .cookiesFromBrowser("firefox")
     //path traversal attack possible or something augh
     .setOutputTemplate(`../reel/${id}.%(ext)s`)
     .on('progress', (p) => console.log(`${p.percentage_str}`))
     .run();
-    console.log(getDefaultResultOrder)
+    console.log(result)
     return result
 }
 
