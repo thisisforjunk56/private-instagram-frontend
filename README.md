@@ -1,4 +1,5 @@
 Watch reels (if you know the URL) using this tool.
+It's a small app so that you can share Instagram reels with friends that don't have an instagram account
 
 It downloads it using yt-dlp and then displays it
 
