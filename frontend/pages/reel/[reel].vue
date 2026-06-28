@@ -13,12 +13,12 @@ onMounted(async () => {
 
 <template>
 
-<main>
+<main class="fle-col justify-center gap-4 p-8">
 <div v-if="json.success">
   <video :src="`/reel-fetch/${id}`" controls></video>
 </div>
-<div class="flex row gap-4">
-  <p>{{ json.description }}</p>
+<div class="flex row gap-4 max-width[50%]">
+  <p class="text-white">{{ json.description }}</p>
 </div>
 </main>
 </template>
@@ -26,15 +26,12 @@ onMounted(async () => {
 <style>
 
 main {
-  display:grid;
-  place-items: center;
-
   height: 100dvh;
   width: 100dvw;
   max-width: 100%;
   max-height: 100%;
 
-  background: white;
+  background: #0f0f0f;
 }
 
 video {
@@ -42,5 +39,7 @@ video {
   max-height: calc(100vh - 6rem);
   width: auto;
   object-fit: cover;
+
+  margin: auto;
 }
 </style>
