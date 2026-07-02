@@ -1,6 +1,6 @@
 <script setup>
  const url = window.location.href
-  const id = url.split("/").at(-1)
+  const id = url.split("/").filter(items => items !== "").at(-1)
 const json = ref({ success: false, description: "Loading video..." })
 onMounted(async () => {
 
